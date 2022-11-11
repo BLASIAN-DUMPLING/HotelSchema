@@ -182,3 +182,13 @@ VALUES
 (23, 2, 2, 0),
 (24, 2, 2, 2),
 (25, 11, 2, 0);
+
+--removed Jeremiah Pendergrass
+use cjosephhotel;
+DELETE FROM `cjosephhotel`.`guest` WHERE (`guestId` = '8');
+
+--checked to verify the deletion of Pendergrass
+SELECT * 
+FROM guests gs
+WHERE gs.guestId = (
+8);
