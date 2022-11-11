@@ -28,16 +28,16 @@ city VARCHAR (100) NOT NULL,
 stateAbbr VARCHAR (2) NOT NULL,
 zipCode CHAR (5) NOT NULL,
 phoneNumber VARCHAR (15) NOT NULL,
-CONSTRAINT pk_guest PRIMARY KEY (guestId) );
+CONSTRAINT pk_guest PRIMARY KEY (guestId) ); /* this table was updated -  guestName was made to be a foreign key connected to reservation (table) */
 
-CREATE TABLE reservations (
+CREATE TABLE reservations ( 
 reservationId INT NOT NULL auto_increment,
 roomTypeId INT NOT NULL,
 guestName VARCHAR (100) NOT NULL,
 startDate DATE NOT NULL,
 endDate DATE NOT NULL,
 CONSTRAINT pk_reservations PRIMARY KEY (reservationId)
-);
+); /* this table was updated -  the roomTypeID was changed to roomId and made to be a foreign key connected to room (table) */
 
 CREATE TABLE  reservationinfo (
 reservationId INT NOT NULL, 
