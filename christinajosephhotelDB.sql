@@ -1,3 +1,6 @@
+CREATE DATABASE cjosephhotel;
+
+
 use cjosephhotel;
 
 CREATE TABLE roomType ( 
